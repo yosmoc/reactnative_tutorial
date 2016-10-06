@@ -9,11 +9,16 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
 class reactnative_tutorial extends Component {
   render() {
+    let pic = {
+      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    };
+
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -26,6 +31,7 @@ class reactnative_tutorial extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Image source={pic} style={{width: 193, height: 110}}/>
       </View>
     );
   }
