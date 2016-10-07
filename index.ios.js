@@ -9,9 +9,32 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   Image,
   View
 } from 'react-native';
+
+class PizzaTranslator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: ''};
+  }
+
+  render() {
+    return (
+      <View style={{padding: 10}}>
+        <TextInput
+          style={{height: 40}}
+          placeholder="Type here to translate !!!!!"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <Text style={{padding: 10, fontSize: 42}}>
+          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+        </Text>
+      </View>
+    )
+  }
+}
 
 class reactnative_tutorial extends Component {
   render() {
@@ -24,6 +47,7 @@ class reactnative_tutorial extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+        <PizzaTranslator/>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
         </Text>
