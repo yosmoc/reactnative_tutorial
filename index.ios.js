@@ -36,6 +36,18 @@ class PizzaTranslator extends Component {
   }
 }
 
+class FixedDimensionsBasics extends Component {
+  render() {
+    return(
+      <View>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+        <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+      </View>
+    );
+  }
+}
+
 class reactnative_tutorial extends Component {
   render() {
     let pic = {
@@ -56,6 +68,7 @@ class reactnative_tutorial extends Component {
           Cmd+D or shake for dev menu
         </Text>
         <Image source={pic} style={{width: 193, height: 110}}/>
+        <FixedDimensionsBasics/>
       </View>
     );
   }
